@@ -34,7 +34,6 @@ function App() {
           {activeTab === "booking" ? <BookingTable data={dataBooking} /> : <AkadTable data={dataAkad} />}
         </div>
 
-        {/* Info Cards */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
           {[["Total Booking", dataBooking.length, "blue"], ["Total Akad", dataAkad.length, "green"], ["SPR Aktif", dataBooking.filter((b) => b.status_aktif_spr === 1).length, "yellow"], ["Total Transaksi", dataBooking.length + dataAkad.length, "purple"]].map(([label, count, color], idx) => (
             <div key={idx} className="bg-white p-4 rounded-lg shadow flex items-center">
